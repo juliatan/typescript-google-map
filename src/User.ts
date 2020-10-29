@@ -17,4 +17,9 @@ export class User {
       lng: parseFloat(faker.address.longitude()),
     };
   }
+
+  // Needed for Mappable interface
+  markerContent(): string {
+    return `User name: ${this.name}`;
+  }
 }
