@@ -1,6 +1,8 @@
 import faker from 'faker';
+import { Mappable } from './CustomMap';
 
-export class User {
+// Every User needs to satisfy Mappable interface - not necessary for us to add implements code, but helps us to debug
+export class User implements Mappable {
   // First set up the type for this class
   name: string;
   location: {
